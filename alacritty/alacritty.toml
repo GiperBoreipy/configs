@@ -1,0 +1,36 @@
+[window]
+decorations = "none"
+title = "Alacritty"
+opacity= 0.95
+blur= true   
+
+[font]
+size = 10.5
+
+[font.offset]
+x = 0
+y = 2
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[general]
+working_directory = 'C:\\'
+
+[terminal]
+
+[terminal.shell]
+program = "powershell"
+args = ["-NoLogo"]
+
+[cursor]
+style = "Beam"
