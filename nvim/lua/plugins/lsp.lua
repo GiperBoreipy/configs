@@ -9,7 +9,9 @@ return {
         "neovim/nvim-lspconfig",
         dependencies = { "williamboman/mason.nvim" },
         config = function()
-            require("lspconfig").basedpyright.setup({
+            lspconfig = require("lspconfig")
+            lspconfig.nginx_language_server.setup({})
+            lspconfig.basedpyright.setup({
                 settings = {
                     basedpyright = {
                         analysis = {

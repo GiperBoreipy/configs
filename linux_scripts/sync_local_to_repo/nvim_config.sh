@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SOURCE_DIR="$HOME/.config/nvim"
-DEST_DIR="../../nvim"
+DEST_DIR="./nvim"
 
 if [ ! -d "$SOURCE_DIR" ]; then
     echo "Ошибка: исходная директория $SOURCE_DIR не существует."
@@ -10,6 +10,6 @@ fi
 
 mkdir -p "$DEST_DIR"
 
-rsync -av --delete "$SOURCE_DIR"/* "$DEST_DIR"/
+rsync -av --force "$SOURCE_DIR"/* "$DEST_DIR"/
 
 echo "Все файлы успешно перемещены из $SOURCE_DIR в $DEST_DIR"

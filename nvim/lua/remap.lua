@@ -17,8 +17,15 @@ end, { desc = 'Fuzzy find in current buffer' })
 
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
 
-vim.keymap.set("n", "<leader>ft", "<cmd>Telescope grep_string search='\\b(TODO|NOTE|FIXME|HACK|BUG)\\b'<CR>", { 
-  desc = "Find TODOs/FIXMEs" 
+vim.keymap.set("n", "<leader>ft", function()
+  require('telescope.builtin').grep_string({
+    prompt_title = "Find TODOs/FIXMEs",
+    search = "\\b(TODO|NOTE|FIXME|HACK|BUG)\\b",
+    use_regex = true,
+    search_dirs = { "." }  -- искать в текущем проекте
+  })
+end, {
+  desc = "Find TODOs/FIXMEs in project"
 })
 
 vim.keymap.set("n", "<leader>fv", function()
@@ -44,4 +51,9 @@ vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Перейти в левое о
 vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Перейти в нижнее окно' })
 vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Перейти в верхнее окно' })
 vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Перейти в правое окно' })
+
+-- Форматтер --
+vim.keymap.set("n", "<A-F>", function()
+    require("conform").format({ async = true, lsp_fallback = true })
+end, { desc = "Format file" })
 

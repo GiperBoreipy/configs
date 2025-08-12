@@ -14,15 +14,6 @@ vim.opt.switchbuf = 'uselast'
 
 vim.cmd 'colorscheme kanagawa'
 
--- Автоматически устанавливать Unix-формат для всех файлов
-vim.api.nvim_create_autocmd("BufRead", {
-  pattern = "*",
-  callback = function()
-    vim.bo.fileformat = "unix"  -- Принудительно использовать LF вместо CRLF
-  end,
-})
-
-
 
 vim.opt.termguicolors = true
 
@@ -59,16 +50,7 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
--- Автоформатирование при сохранении
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = function(args)
-    vim.lsp.buf.format({
-      async = false, -- Синхронное форматирование
-    })
-  end,
-})
-vim.o.updatetime = 250
+vim.o.updatetime = 750
 
 
 
