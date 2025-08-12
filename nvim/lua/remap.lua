@@ -40,10 +40,6 @@ vim.keymap.set("n", "<leader>fv", function()
   })
 end, { desc = "Find variable references" })
 
-vim.keymap.set("n", "<leader>fV", "<cmd>Telescope grep_string<CR>", {
-  desc = "Find variable by name" 
-})
-
 
 -- Работа с окнами
 vim.keymap.set('n', '<C-\\>', '<cmd>vsplit<CR><C-w>l', { desc = 'Horizontal Split' })
