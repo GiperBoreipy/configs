@@ -6,7 +6,7 @@ return  {
     local dashboard = require("alpha.themes.dashboard")
 
     dashboard.section.header.val = {
-        [[                                                   ]],
+      [[                                                   ]],
       [[                                              ___  ]],
       [[                                           ,o88888 ]],
       [[                                        ,o8888888' ]],
@@ -39,14 +39,14 @@ return  {
       
       if vim.fn.executable("git") == 1 then
         -- Ветка
-        local branch_handle = io.popen("git branch --show-current 2>nul")
+        local branch_handle = io.popen("git branch --show-current")
         if branch_handle then
           git_branch = branch_handle:read("*a"):gsub("%s+", "") or "N/A"
           branch_handle:close()
         end
         
         -- Проект (имя папки)
-        local project_handle = io.popen("git rev-parse --show-toplevel 2>nul")
+        local project_handle = io.popen("git rev-parse --show-toplevel")
         if project_handle then
           local project_path = project_handle:read("*a"):gsub("%s+", "")
           project_handle:close()

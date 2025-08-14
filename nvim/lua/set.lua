@@ -12,7 +12,7 @@ vim.opt.ruler = true
 vim.opt.switchbuf = 'uselast' 
 
 
-vim.cmd 'colorscheme kanagawa'
+vim.cmd 'colorscheme vague'
 
 
 vim.opt.termguicolors = true
