@@ -24,13 +24,12 @@ return {
                 hijack_cursor = true,
                 hijack_unnamed_buffer_when_opening = true,
                 filters = {
-                    dotfiles = true, -- скрывать все dot-файлы по умолчанию
-                    -- или можно использовать exclude для тех же целей
+                    dotfiles = true, 
                     exclude = {
                       ".gitignore",
-                      ".dockerignore", ".env"
+                      ".env", ".dockerignore"
                     },
-                  },
+                                    },
                 renderer = {
                     indent_markers = {
                       enable = true,          -- показывать вертикальные линии иерархии

@@ -1,15 +1,14 @@
 [window]
-decorations = "none"
 title = "Alacritty"
-opacity= 0.95
+dimensions = { columns = 120, lines = 35 }
 blur= true   
 
 [font]
-size = 10.5
+size = 10.1
 
 [font.offset]
 x = 0
-y = 2
+y = 4
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
@@ -24,13 +23,12 @@ family = "JetBrainsMono Nerd Font"
 style = "Italic"
 
 [general]
-working_directory = 'C:\\'
+working_directory = '~'
 
-[terminal]
 
 [terminal.shell]
-program = "powershell"
-args = ["-NoLogo"]
+program = "/bin/zsh"
+
 
 [cursor]
 style = "Beam"
