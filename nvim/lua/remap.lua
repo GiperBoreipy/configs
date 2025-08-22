@@ -17,6 +17,13 @@ end, { desc = 'Fuzzy find in current buffer' })
 
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
 
+vim.keymap.set("n", "<leader>fg", function()
+  require("telescope.builtin").live_grep({
+    prompt_title = "Search in Project",
+  })
+end, { desc = "Live grep in project" })
+
+
 vim.keymap.set("n", "<leader>ft", function()
   require('telescope.builtin').grep_string({
     prompt_title = "Find TODOs/FIXMEs",
