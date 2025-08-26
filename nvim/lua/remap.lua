@@ -12,8 +12,13 @@ vim.keymap.set('n', '<leader>bo', '<cmd>BufferLineCloseOthers<CR>', { desc = 'Cl
 
 -- Telescope
 vim.keymap.set('n', '<leader>f/', function()
-  require('telescope.builtin').current_buffer_fuzzy_find()
-end, { desc = 'Fuzzy find in current buffer' })
+  require('telescope.builtin').live_grep({
+    prompt_title = "Search exact in current buffer",
+    search_dirs = {vim.fn.expand("%:p")},
+    use_regex = false, -- отключает регулярные выражения
+    disable_coordinates = true
+  })
+end, { desc = 'Search exact string in current buffer' })
 
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
 
