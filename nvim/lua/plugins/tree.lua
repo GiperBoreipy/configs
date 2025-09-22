@@ -27,9 +27,11 @@ return {
                     dotfiles = true, 
                     exclude = {
                       ".gitignore",
-                      ".env", ".dockerignore"
+                      ".env", 
+                      ".dockerignore",
+                      ".gitlab-ci.yml"
                     },
-                                    },
+                },
                 renderer = {
                     indent_markers = {
                       enable = true,          -- показывать вертикальные линии иерархии

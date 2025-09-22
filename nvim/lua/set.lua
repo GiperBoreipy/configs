@@ -12,7 +12,7 @@ vim.opt.ruler = true
 vim.opt.switchbuf = 'uselast' 
 
 
-vim.cmd 'colorscheme vague'
+vim.cmd 'colorscheme nordic'
 
 
 vim.opt.termguicolors = true
