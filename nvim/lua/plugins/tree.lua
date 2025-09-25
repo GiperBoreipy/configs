@@ -24,13 +24,14 @@ return {
                 hijack_cursor = true,
                 hijack_unnamed_buffer_when_opening = true,
                 filters = {
-                    dotfiles = true, 
-                    exclude = {
-                      ".gitignore",
-                      ".env", 
-                      ".dockerignore",
-                      ".gitlab-ci.yml"
+                    dotfiles = false, 
+                    custom = {
+                        ".git", ".venv"
                     },
+                    exclude = {
+                        ".gitignore", 
+                        ".env"
+                    }
                 },
                 renderer = {
                     indent_markers = {
