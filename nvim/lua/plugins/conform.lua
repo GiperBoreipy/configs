@@ -4,14 +4,9 @@ return {
         config = function()
             require("conform").setup({
                 formatters_by_ft = {
-                    python = { "ruff", "isort" },
+                    python = { "ruff", },
                 },
-                formatters = {
-                  ruff = {
-                    prepend_args = { "--fix" }, 
-                  },
-                  isort = {},
-                },
+                
             })
         end,
     }
