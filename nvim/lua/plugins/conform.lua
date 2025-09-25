@@ -4,11 +4,11 @@ return {
         config = function()
             require("conform").setup({
                 formatters_by_ft = {
-                    python = { "black" },
+                    python = { "ruff" },
                 },
                 formatters = {
                   black = {
-                    prepend_args = { "--line-length", "120" }, 
+                    prepend_args = { "--fix" }, 
                   },
                 },
             })

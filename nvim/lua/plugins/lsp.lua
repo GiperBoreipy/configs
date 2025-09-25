@@ -2,7 +2,7 @@ return {
     {
         "williamboman/mason.nvim",
         opts = {
-            ensure_installed = { "basedpyright", "black" } 
+            ensure_installed = { "basedpyright", "ruff" } 
         }
     },
     {
