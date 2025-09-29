@@ -4,9 +4,8 @@ return {
         config = function()
             require("conform").setup({
                 formatters_by_ft = {
-                    python = { "ruff", },
+                    python = { "ruff_format" },
                 },
-                
             })
         end,
     }

@@ -30,7 +30,8 @@ return {
                     },
                     exclude = {
                         ".gitignore", 
-                        ".env"
+                        ".env", 
+                        ".gitlab-ci.yml"
                     }
                 },
                 renderer = {
