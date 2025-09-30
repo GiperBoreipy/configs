@@ -12,7 +12,7 @@ vim.opt.ruler = true
 vim.opt.switchbuf = 'uselast' 
 
 
-vim.cmd 'colorscheme nordic'
+vim.cmd 'colorscheme moonfly'
 
 
 vim.opt.termguicolors = true
