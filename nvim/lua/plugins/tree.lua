@@ -26,7 +26,6 @@ return {
                 filters = {
                     dotfiles = false, 
                     custom = {
-                        ".git", ".venv"
                     },
                     exclude = {
                         ".gitignore", 
