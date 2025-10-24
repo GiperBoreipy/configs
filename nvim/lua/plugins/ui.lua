@@ -21,5 +21,9 @@ return {
         extensions = { "nvim-tree" }
       })
     end
-  }
+  },
+    {
+      "sphamba/smear-cursor.nvim",
+      opts = {},
+    }
 }
